@@ -24,24 +24,27 @@ from .manifest_lds_clean import create_manifest
 
 DEFAULT_CONFIG = {
     # Input tables (where unioned OMOP data lives)
-    "input_catalog_schema": "raw_data.lds_union",
+    # Format: {input_catalog_schema}.unioned_{domain}
+    "input_catalog_schema": "workspace.demo",
 
     # Output tables (where cleaned data will be written)
-    "output_catalog_schema": "clean_data.lds",
+    # Format: {output_catalog_schema}.{domain}
+    "output_catalog_schema": "workspace.demo",
 
     # Audit tables (where nulled rows are logged)
-    "nulled_rows_catalog_schema": "audit.lds_cleaning",
+    # Format: {nulled_rows_catalog_schema}.{domain}_nulled_rows
+    "nulled_rows_catalog_schema": "workspace.demo",
 
     # Manifest input tables
-    "manifest_table": "reference.manifest",
-    "data_partners_table": "reference.data_partners",
-    "data_partner_release_status_table": "reference.data_partner_release_status",
-    "check_group_links_table": "reference.check_group_links",
-    "pprl_site_opt_ins_table": "reference.pprl_site_opt_ins",
-    "dedup_sites_table": "reference.dedup_sites",
+    "manifest_table": "workspace.demo.manifest",
+    "data_partners_table": "workspace.demo.data_partners",
+    "data_partner_release_status_table": "workspace.demo.data_partner_release_status",
+    "check_group_links_table": "workspace.demo.check_group_links",
+    "pprl_site_opt_ins_table": "workspace.demo.pprl_site_opt_ins",
+    "dedup_sites_table": "workspace.demo.dedup_sites",
 
     # Manifest output
-    "manifest_output_table": "clean_data.lds_manifest",
+    "manifest_output_table": "workspace.demo.lds_manifest",
 }
 
 
