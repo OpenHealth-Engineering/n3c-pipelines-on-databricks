@@ -29,13 +29,13 @@ DEFAULT_CONFIG = {
 
     # Output tables (where cleaned data will be written)
     # Format: {output_catalog_schema}.{domain}
-    "output_catalog_schema": "workspace.demo_databricks",
+    "output_catalog_schema": "workspace.demo_databricks_output",
 
-    # Audit tables (where nulled rows are logged)
+    # Audit tables (where nulled rows are logged when PHI is detected/removed)
     # Format: {nulled_rows_catalog_schema}.{domain}_nulled_rows
-    "nulled_rows_catalog_schema": "workspace.demo_databricks",
+    "nulled_rows_catalog_schema": "workspace.demo_databricks_output",
 
-    # Manifest input tables
+    # Manifest input tables (external reference tables - may not exist)
     "manifest_table": "workspace.demo_databricks.manifest",
     "data_partners_table": "workspace.demo_databricks.data_partners",
     "data_partner_release_status_table": "workspace.demo_databricks.data_partner_release_status",
@@ -44,7 +44,7 @@ DEFAULT_CONFIG = {
     "dedup_sites_table": "workspace.demo_databricks.dedup_sites",
 
     # Manifest output
-    "manifest_output_table": "workspace.demo_databricks.lds_manifest",
+    "manifest_output_table": "workspace.demo_databricks_output.lds_manifest",
 }
 
 
