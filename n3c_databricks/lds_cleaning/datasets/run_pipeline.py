@@ -25,26 +25,26 @@ from .manifest_lds_clean import create_manifest
 DEFAULT_CONFIG = {
     # Input tables (where unioned OMOP data lives)
     # Format: {input_catalog_schema}.unioned_{domain}
-    "input_catalog_schema": "workspace.demo",
+    "input_catalog_schema": "workspace.demo_databricks",
 
     # Output tables (where cleaned data will be written)
     # Format: {output_catalog_schema}.{domain}
-    "output_catalog_schema": "workspace.demo",
+    "output_catalog_schema": "workspace.demo_databricks",
 
     # Audit tables (where nulled rows are logged)
     # Format: {nulled_rows_catalog_schema}.{domain}_nulled_rows
-    "nulled_rows_catalog_schema": "workspace.demo",
+    "nulled_rows_catalog_schema": "workspace.demo_databricks",
 
     # Manifest input tables
-    "manifest_table": "workspace.demo.manifest",
-    "data_partners_table": "workspace.demo.data_partners",
-    "data_partner_release_status_table": "workspace.demo.data_partner_release_status",
-    "check_group_links_table": "workspace.demo.check_group_links",
-    "pprl_site_opt_ins_table": "workspace.demo.pprl_site_opt_ins",
-    "dedup_sites_table": "workspace.demo.dedup_sites",
+    "manifest_table": "workspace.demo_databricks.manifest",
+    "data_partners_table": "workspace.demo_databricks.data_partners",
+    "data_partner_release_status_table": "workspace.demo_databricks.data_partner_release_status",
+    "check_group_links_table": "workspace.demo_databricks.check_group_links",
+    "pprl_site_opt_ins_table": "workspace.demo_databricks.pprl_site_opt_ins",
+    "dedup_sites_table": "workspace.demo_databricks.dedup_sites",
 
     # Manifest output
-    "manifest_output_table": "workspace.demo.lds_manifest",
+    "manifest_output_table": "workspace.demo_databricks.lds_manifest",
 }
 
 
